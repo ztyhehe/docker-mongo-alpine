@@ -13,4 +13,3 @@ COPY docker-entrypoint.sh /usr/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["mongod", "--bind_ip_all"]
-s
