@@ -8,6 +8,9 @@
 网上找到的都不能直接设置用户名密码，也不能执行初始化脚本 就很麻烦啊  
 自己就弄了个这 放上来让大家省点事
 
+## Pull
+`docker pull ztyhehe/mongo-alpine:3.4`
+
 
 ## Build
 
