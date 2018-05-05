@@ -9,6 +9,10 @@
 自己就弄了个这 放上来让大家省点事
 
 
+## Pull
+`docker pull ztyhehe/mongo-alpine`
+
+
 ## Build
 
 `docker build -t mongo-alpine .`
