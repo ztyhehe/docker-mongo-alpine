@@ -9,7 +9,7 @@
 自己就弄了个这 放上来让大家省点事
 
 ## Pull
-`docker pull ztyhehe/mongo-alpine:3.4`
+`docker pull ztyhehe/mongo-alpine`
 
 
 ## Build
