@@ -1,13 +1,6 @@
 #!/bin/sh
 
-# Docker entrypoint (pid 1), run as root
-[ "$1" = "mongod" ] || exec "$@" || exit $?
-
-# Make sure that database is owned by user mongodb
-[ "$(stat -c %U /data/db)" = mongodb ] || chown -R mongodb /data/db
-
-# Drop root privilege (no way back), exec provided command as user mongodb
-cmd=exec
+cmd=
 for i; do
 	cmd="$cmd '$i'"
 done
@@ -79,7 +72,7 @@ if [ -n "$shouldPerformInitdb" ]; then
 
 	# start mongod
 	# init db or set password
-	$mongod_cmd --fork mongodb
+	$mongod_cmd --fork
 
 	mongo_cmd="mongo --quiet"
 
@@ -117,4 +110,4 @@ if [ -n "$shouldPerformInitdb" ]; then
 	echo
 fi
 
-exec su -s /bin/sh -c "$cmd" mongodb
+exec /bin/sh -c "$cmd"
