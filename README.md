@@ -18,8 +18,8 @@
 `docker build -t mongo-alpine .`
 
 > PS:  
-alpine:latest (现在是3.7) 安装mongo只有3.4版本  
-alpine:edge 安装mongo是3.6版本
+3.10移除了Mongodb 在仓库中  
+https://alpinelinux.org/posts/Alpine-3.10.0-released.html
 
 
 ## 运行

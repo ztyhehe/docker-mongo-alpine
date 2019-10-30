@@ -1,4 +1,6 @@
-FROM alpine:edge
+FROM alpine:3.9
+# 3.10移除了Mongodb 在仓库中
+# https://alpinelinux.org/posts/Alpine-3.10.0-released.html
 
 RUN apk add --no-cache mongodb && \
     rm /usr/bin/mongoperf
