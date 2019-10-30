@@ -1,7 +1,7 @@
-FROM alpine:edge
+FROM alpine:3.8
 
 RUN apk add --no-cache mongodb && \
-    rm /usr/bin/mongoperf
+    rm -f /usr/bin/mongoperf
 
 # copy initdb files
 COPY docker-entrypoint-initdb.d /docker-entrypoint-initdb.d
